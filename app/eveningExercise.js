@@ -19,18 +19,19 @@ exports.eveningExerciseAnswers = {
     return count
   },
 
-  // remove : function(arr, item) {
-  //   for( var i = 0; i < arr.length; i ++) {
-  //     if(arr[i] === item) {
-  //       arr.splice(i, item);
-  //     }
-  //   }
-  //   return arr
-  //
-  // },
+
+  remove : function(arr, item) {
+    for(var i = arr.length - 1; i >= 0; i--) {
+      if(arr[i] === item) arr.splice(i, 1);
+    }
+    return arr
+  },
 
   reverseString : function(str) {
-
+    var rev = '';
+    for( var i = str.length - 1; i >= 0; i--)
+      rev += str[i];
+      return rev;
   },
 
   longestSubString : function(str) {
