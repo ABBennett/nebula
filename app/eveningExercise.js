@@ -43,10 +43,14 @@ exports.eveningExerciseAnswers = {
   },
 
   letterMoveForward : function(str) {
-
+    forward_array = [];
+    for( var i = 0; i < str.length; i++) {
+      forward_array.push(String.fromCharCode(str.charCodeAt(i) + 1));
+    }
+    return forward_array.join('');
   },
 
   capitalizeWords : function(str) {
-
+    return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});   
   }
 };
